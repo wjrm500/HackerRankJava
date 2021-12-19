@@ -29,6 +29,9 @@ public class Java1DArrayPart2 {
 
         int consecutiveZeroes = 0;
         int i = 0;
+        if (leap > game.length) {
+            return true;
+        }
         while (i <= game.length - leap) {
             if (game[i] == 0) {
                 consecutiveZeroes++;
@@ -63,3 +66,12 @@ public class Java1DArrayPart2 {
         return true;
     }
 }
+
+/*
+Doesn't work in all cases e.g. for this input:
+1
+84 13
+0 0 1 1 1 1 1 0 1 1 0 1 1 0 1 1 1 1 1 0 1 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 1 0 1 0 0 0 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 0 1 1 1 0 0 0 1 1 0 1 0 1 0 1 0
+
+Looks like a recursive solution is needed for all cases to pass
+ */
