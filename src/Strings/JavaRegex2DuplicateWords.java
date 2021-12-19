@@ -20,5 +20,6 @@ public class JavaRegex2DuplicateWords {
             }
             System.out.println(input);
         }
+        scanner.close();
     }
 }
