@@ -21,7 +21,7 @@ public class JavaArraylist {
                     .boxed()
                     .collect(Collectors.toList());
             ArrayList<Integer> subArrList = new ArrayList(numList);
-//            subArrList.remove(0); // First value in list is "an integer  denoting number of integers on that line"
+            subArrList.remove(0); // First value in list is "an integer  denoting number of integers on that line"
             arrList.add(subArrList);
         }
         int q = scanner.nextInt();
@@ -29,7 +29,7 @@ public class JavaArraylist {
             int x = scanner.nextInt();
             int y = scanner.nextInt();
             try {
-                System.out.println(arrList.get(x - 1).get(y));
+                System.out.println(arrList.get(x - 1).get(y - 1));
             } catch (IndexOutOfBoundsException ex) {
                 System.out.println("ERROR!");
             }
